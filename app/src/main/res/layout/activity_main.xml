@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kalkulator"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="#A85CF9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/data1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data 1"
+        app:layout_constraintTop_toBottomOf="@id/judul"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"/>
+
+    <EditText
+        android:id="@+id/isiData1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AB46D2"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/data1"
+        app:layout_constraintStart_toStartOf="@+id/data1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/data2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data 2"
+        app:layout_constraintStart_toStartOf="@id/data1"
+        app:layout_constraintTop_toBottomOf="@id/isiData1"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/isiData2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AB46D2"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/data2"
+        app:layout_constraintStart_toStartOf="@+id/data2"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/tombolTambah"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Tambah"
+        app:layout_constraintTop_toBottomOf="@id/isiData2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tombolKurang"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:backgroundTint="#006E7F"/>
+
+    <Button
+        android:id="@+id/tombolKurang"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Kurang"
+        app:layout_constraintTop_toBottomOf="@id/isiData2"
+        app:layout_constraintStart_toEndOf="@id/tombolTambah"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:backgroundTint="#EE5007"/>
+
+    <Button
+        android:id="@+id/tombolKali"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Kali"
+        app:layout_constraintTop_toBottomOf="@id/tombolTambah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tombolBagi"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:textStyle="bold"
+        android:backgroundTint="#F8CB2E"/>
+
+    <Button
+        android:id="@+id/tombolBagi"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Bagi"
+        app:layout_constraintTop_toBottomOf="@id/tombolKurang"
+        app:layout_constraintStart_toEndOf="@id/tombolKali"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:backgroundTint="#B22727"/>
+
+    <TextView
+        android:id="@+id/hasilHitung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:textColor="#5F7161"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tombolKali"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
